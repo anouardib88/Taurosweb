@@ -2464,6 +2464,11 @@
         
         // Create install button
         function createInstallButton() {
+            const existing = document.getElementById('pwa-install-btn');
+            if (existing) {
+                installButton = existing;
+                return;
+            }
             installButton = document.createElement('button');
             installButton.id = 'pwa-install-btn';
             installButton.innerHTML = `
