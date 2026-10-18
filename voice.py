@@ -90,7 +90,7 @@ class VoiceSystem:
         if self._engine:
             try:
                 self._engine.stop()
-            except:
+            except Exception:
                 pass
         self.executor.shutdown(wait=False)
         

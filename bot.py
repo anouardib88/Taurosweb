@@ -212,7 +212,7 @@ class TauroBot:
             for code, name in get_available_languages().items():
                 marker = " ✓" if code == current_lang else ""
                 text += f"{name}{marker}\n"
-            text += f"\nUsa: /lang <codice> (es. /lang en)"
+            text += "\nUsa: /lang <codice> (es. /lang en)"
             await update.message.reply_text(text, parse_mode='Markdown')
         
     async def query_ollama(self, prompt: str, context_messages: Optional[List[Dict[str, Any]]] = None) -> Optional[str]:
@@ -489,7 +489,6 @@ Text: {text_to_translate}"""
         """Handler per il comando /remind - Imposta promemoria"""
         user_id = update.effective_user.id
         chat_id = update.effective_chat.id
-        lang = i18n.get_user_language(user_id)
         
         if not context.args or len(context.args) < 2:
             await update.message.reply_text(
@@ -568,7 +567,7 @@ Text: {text_to_translate}"""
             message = "Promemoria!"
         
         # Crea il reminder
-        reminder = self.reminders.add_reminder(
+        self.reminders.add_reminder(
             user_id=user_id,
             chat_id=chat_id,
             message=message,

@@ -21,7 +21,9 @@ class MemorySystem:
         
     def _ensure_directory(self):
         """Crea la directory memory se non esiste"""
-        os.makedirs(os.path.dirname(self.memory_file), exist_ok=True)
+        directory = os.path.dirname(self.memory_file)
+        if directory:
+            os.makedirs(directory, exist_ok=True)
         
     async def load_memory(self) -> bool:
         """Carica la memoria dal file"""
