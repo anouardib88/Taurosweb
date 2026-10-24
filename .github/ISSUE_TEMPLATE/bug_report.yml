@@ -1,0 +1,31 @@
+name: Segnalazione bug
+description: Segnala un problema riproducibile nel sito o nel codice
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problema
+      description: Che cosa non funziona?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passaggi per riprodurre
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Risultato atteso
+    validations:
+      required: true
+  - type: checkboxes
+    id: safe
+    attributes:
+      label: Dati sicuri
+      options:
+        - label: Ho rimosso token, password, dati personali e log sensibili.
+          required: true

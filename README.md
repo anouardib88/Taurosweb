@@ -1,9 +1,30 @@
-# Taurosweb - TauroBot 3.0 Ultimate
+# DIBORACULUM — sito pubblico e repository Taurosweb
+
+## Il sito pubblico
+
+DIBORACULUM è una presentazione informativa di un progetto software in sviluppo. Il sito non dichiara l'applicazione pronta all'uso e non offre login o contenuti privati.
+
+- Sorgenti del sito: [docs/](https://github.com/anouardib88/Taurosweb/tree/main/docs)
+- Repository: [anouardib88/Taurosweb](https://github.com/anouardib88/Taurosweb)
+- Contributi e segnalazioni: [GitHub Issues](https://github.com/anouardib88/Taurosweb/issues)
+- Pubblicazione GitHub Pages e dominio: [reports/GITHUB_DEPLOYMENT.md](reports/GITHUB_DEPLOYMENT.md)
+- Piano e audit: [piano d'azione](DIBORACULUM_ACTION_PLAN.md), [sicurezza](reports/SECURITY_REPORT.md), [repository](reports/REPOSITORY_AUDIT.md), [red team](reports/RED_TEAM_REPORT.md), [SEO](reports/SEO_AUDIT.md), [contenuti e CTA](reports/CONTENT_CTA_REPORT.md)
+
+La pubblicazione è predisposta per GitHub Pages dalla cartella `docs/` del branch `main`. Per un'anteprima locale:
+
+```bash
+python3 -m http.server 8000 --directory docs
+```
+
+Il dominio richiesto è `diboracullum.com` (due “l” consecutive). Il repository storico riporta `diboraculum.com` (una “l”). I metadati del nuovo sito seguono la grafia richiesta; CNAME, Pages, proprietà del dominio e DNS restano da verificare prima della pubblicazione. Anche la relazione tra DIBORACULUM e il codice TauroBot/Taurosweb presente nel repository va chiarita prima di descrivere funzioni di prodotto.
+
+## Taurosweb — contenuti applicativi del repository
+
 
 ![Avatar del proprietario](https://avatars.githubusercontent.com/u/198739241?s=48&v=4)
 
-## Descrizione
-Taurosweb è il sito ufficiale di **TauroBot 3.0 Ultimate**, un bot AI avanzato per Telegram che integra Ollama, memoria intelligente, sintesi vocale e un'anima hacker. Progettato per offrire un'esperienza interattiva, personalizzata e potente agli utenti Telegram.
+### Descrizione
+Taurosweb contiene il codice, le configurazioni e la PWA storica di **TauroBot 3.0** per Telegram. Le descrizioni funzionali che seguono provengono dai documenti preesistenti; il servizio e le singole funzioni non sono stati verificati in questo audit.
 
 ---
 
@@ -15,20 +36,17 @@ Taurosweb è il sito ufficiale di **TauroBot 3.0 Ultimate**, un bot AI avanzato 
 - **Compatibilità Telegram:** Facile integrazione e utilizzo tramite la piattaforma Telegram.
 - **📱 Progressive Web App (PWA):** Installabile su Android, iOS e Desktop come app nativa!
 - **🐳 Docker Ready:** Containerizzazione completa con docker-compose
-- **🌍 Multi-lingua:** Supporto per 5 lingue (IT, EN, ES, FR, DE)
+- **🌍 Multi-lingua:** il repository contiene file di localizzazione; copertura runtime da verificare
 - **🛡️ Rate Limiting:** Protezione anti-spam integrata
 - **⚙️ CI/CD:** GitHub Actions per test automatici e deploy
 
 ---
 
 ## Stato del progetto
-- ✅ **Implementazione completata!**
-- Repository pubblico su GitHub
-- Bot completamente funzionale con tutti i componenti
-- Codice pronto per l'uso in produzione
-- Ultimo aggiornamento: Ottobre 2025
 
----
+- Il repository contiene il codice di TauroBot e il sito informativo DIBORACULUM in `docs/`.
+- DIBORACULUM è in sviluppo. La presenza di una funzione nel README non prova che il servizio sia attualmente online o pronto per produzione.
+- Il repository è pubblico; non sono state trovate release GitHub pubblicate nell'audit.
 
 ## Installazione
 
@@ -39,7 +57,7 @@ Taurosweb è il sito ufficiale di **TauroBot 3.0 Ultimate**, un bot AI avanzato 
 #### Metodo 1: Automatico (Consigliato)
 1. Clona il repository:
    ```bash
-   git clone https://github.com/Lucifer-AI-666/Taurosweb.git
+   git clone https://github.com/anouardib88/Taurosweb.git
    cd Taurosweb
    ```
 2. Esegui lo script di setup:
@@ -61,7 +79,7 @@ Taurosweb è il sito ufficiale di **TauroBot 3.0 Ultimate**, un bot AI avanzato 
 #### Metodo 2: Manuale
 1. Clona il repository:
    ```bash
-   git clone https://github.com/Lucifer-AI-666/Taurosweb.git
+   git clone https://github.com/anouardib88/Taurosweb.git
    cd Taurosweb
    ```
 2. Installa le dipendenze:
@@ -85,7 +103,7 @@ Taurosweb è il sito ufficiale di **TauroBot 3.0 Ultimate**, un bot AI avanzato 
 #### Metodo 3: Docker (Raccomandato per produzione)
 ```bash
 # Clona e configura
-git clone https://github.com/Lucifer-AI-666/Taurosweb.git
+git clone https://github.com/anouardib88/Taurosweb.git
 cd Taurosweb
 cp .env.example .env
 # Modifica .env con il tuo TELEGRAM_BOT_TOKEN
@@ -271,50 +289,12 @@ Per domande o supporto, apri una issue su GitHub o contatta gli sviluppatori tra
 
 *Taurosweb - Il tuo bot AI avanzato per Telegram con memoria, sintesi vocale e anima hacker.*
 
-[Visita il repository su GitHub](https://github.com/Lucifer-AI-666/Taurosweb)
+[Visita il repository su GitHub](https://github.com/anouardib88/Taurosweb)
 
 ---
 
-## 🔐 Diboraculum VIP Access (diboraculum.com)
+## Accesso VIP ritirato
 
-Per il dominio **diboraculum.com** è stata aggiunta una **finestra di accesso VIP** protetta da **codice di invito**.
+Il precedente controllo VIP verificava il codice nel browser e non costituiva autenticazione. La pagina e il generatore sono stati ritirati; non usare codici già emessi per proteggere contenuti o dati. La pagina pubblica attuale è statica e non contiene un'area riservata.
 
-### Come funziona
-- Clicca su **⭐ VIP** nella navbar del sito (o apri direttamente `diboraculum-vip.html`)
-- Inserisci un codice di invito valido
-- Il sistema usa una **furbizia crittografica privata** (hash personalizzato + pepper segreto + condizione matematica specifica)
-
-**Solo i codici generati da te (Anouar) con lo script dedicato sono accettati.**
-
-### File aggiunti
-- `diboraculum-vip.html` — Pagina standalone elegante per l'accesso VIP (puoi puntare direttamente il dominio o un path su Vercel)
-- `generate-vip-codes.py` — Lo script Python privato che genera codici validi all'istante
-
-### Genera codici (solo tu)
-```bash
-# Clona (o scarica solo lo script)
-git clone https://github.com/Lucifer-AI-666/Taurosweb.git
-cd Taurosweb
-
-python generate-vip-codes.py --count 5 --base ANOUAR
-python generate-vip-codes.py --count 10 --base DIBORA
-```
-
-Esempi di codici che produce (cambiano a ogni esecuzione):
-```
-DIBANOUAR00007
-DIBDIBORA00042
-...
-```
-
-I codici sono **illimitati** e **facili da generare solo con questo script**.
-Il verificatore sul sito non contiene una lista — usa la stessa logica segreta.
-
-### Consigli
-- Genera i codici in locale e conservali in un posto sicuro.
-- Non committare codici reali nel repo.
-- Lo script contiene i parametri magici (pepper, magic, mod, target) — tienilo privato.
-
----
-
-*Accesso VIP creato per Diboraculum — Unified Intelligence (email: anouardbinra88@gmail.com)*
+Per segnalare problemi o proporre modifiche, usa [GitHub Issues](https://github.com/anouardib88/Taurosweb/issues).

@@ -1,0 +1,21 @@
+name: Proposta
+description: Proponi un miglioramento con uno scopo chiaro
+title: "[Proposta]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Bisogno o problema
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Soluzione proposta
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate

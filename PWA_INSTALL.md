@@ -54,27 +54,15 @@ mkcert localhost
 python -m http.server 8443 --bind localhost
 ```
 
-#### Opzione B: Deploy su hosting (consigliato)
-Deploy su servizi con HTTPS automatico:
-- **GitHub Pages**: Gratuito, HTTPS automatico
-- **Netlify**: Gratuito, deploy automatico
-- **Vercel**: Gratuito, ottimizzato per web apps
-- **Firebase Hosting**: Gratuito con HTTPS
+#### Opzione B: GitHub Pages per il sito statico
 
-### 3. Deploy su GitHub Pages (Raccomandato)
+La presentazione pubblica DIBORACULUM è predisposta per GitHub Pages dalla cartella `docs/`. Questo pubblica soltanto i file statici scelti e non avvia il bot, non configura un backend e non rende verificata la PWA TauroBot.
 
-```bash
-# 1. Assicurati che i file siano committati
-git add index.html manifest.json service-worker.js icons/ PWA_INSTALL.md generate_pwa_icons.py
-git commit -m "Add PWA support for TauroBot 3.0"
-git push
+### 3. Pubblicazione del sito DIBORACULUM
 
-# 2. Vai su GitHub:
-# Settings → Pages → Source: main branch → Save
+Per il sito statico, seleziona in GitHub **Settings → Pages → Deploy from a branch → main → /docs**. I dettagli su dominio, DNS e HTTPS sono in [reports/GITHUB_DEPLOYMENT.md](reports/GITHUB_DEPLOYMENT.md).
 
-# 3. La PWA sarà disponibile su:
-# https://lucifer-ai-666.github.io/Taurosweb/
-```
+Questa procedura non pubblica né certifica il funzionamento dell'applicazione TauroBot descritta in questa guida. Non sono configurati provider alternativi in questo repository.
 
 ## 📲 Come Installare la PWA
 
@@ -183,13 +171,13 @@ const urlsToCache = [
 Dopo il deploy, monitora:
 - **Google Search Console**: Errori PWA
 - **Browser DevTools**: Network, Cache, Service Worker
-- **Analytics**: Installazioni, engagement
+- **Verifica manuale**: caricamento, installazione e service worker
 
 ## 🎯 Prossimi Passi
 
 1. ✅ Genera e aggiungi icone PNG
 2. ✅ Testa localmente con HTTPS
-3. ✅ Deploy su GitHub Pages/Netlify
+3. ✅ Verifica GitHub Pages dalla cartella docs/
 4. ✅ Test su dispositivi reali
 5. ✅ Condividi il link!
 

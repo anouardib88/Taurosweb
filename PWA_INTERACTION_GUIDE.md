@@ -192,17 +192,16 @@ Se hai problemi con la PWA:
 3. **Cache**: Verifica che i file siano cachati
 4. **Network**: Controlla richieste in Network tab
 
-**Contatti**:
-- 📧 Email: anouardbinra88@gmail.com
-- 🐙 GitHub: [Issues](https://github.com/Lucifer-AI-666/Taurosweb/issues)
-- 💬 Telegram: @TauroBot
+**Canale del progetto**: [GitHub Issues](https://github.com/anouardib88/Taurosweb/issues).  
+Per segnalazioni di sicurezza, leggi [SECURITY.md](SECURITY.md). Non pubblicare exploit o dati personali.
 
 ---
 
+
 ## 🎉 Inizia Ora!
 
-1. Visita [TauroBot Web](https://lucifer-ai-666.github.io/Taurosweb/)
-2. Clicca "📱 Installa App"
-3. Goditi l'esperienza app nativa!
+1. Verifica prima che la PWA TauroBot sia effettivamente pubblicata.
+2. Il sito DIBORACULUM è informativo e non è la PWA TauroBot.
+3. Per lo stato del deployment, consulta README.md e reports/GITHUB_DEPLOYMENT.md.
 
 **Buon divertimento con TauroBot 3.0 PWA! 🐂**

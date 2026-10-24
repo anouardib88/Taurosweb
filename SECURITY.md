@@ -1,21 +1,18 @@
 # Security Policy
 
-## Supported Versions
+## Versioni supportate
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+| Versione | Supporto |
+| --- | --- |
+| Branch `main` | Revisione best-effort del contenuto corrente |
+| Release versionate | Nessuna release supportata dichiarata |
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Il sito DIBORACULUM è statico e non fornisce autenticazione o aree riservate.
 
-## Reporting a Vulnerability
+## Segnalare una vulnerabilità
 
-Use this section to tell people how to report a vulnerability.
+Non pubblicare su GitHub Issues credenziali, dati personali, exploit funzionanti o dettagli che facilitino un attacco.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Se GitHub mostra l'opzione **Report a vulnerability** nella scheda Security del repository, usala per una segnalazione privata. Se l'opzione non è disponibile, apri una issue senza dettagli tecnici sensibili chiedendo un canale privato; attendi prima di inviare il proof of concept.
+
+La disponibilità della segnalazione privata e un tempo di risposta garantito non sono stati verificati. Evita di includere token, password, codici VIP o dati reali nelle segnalazioni.
