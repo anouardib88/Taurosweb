@@ -241,8 +241,8 @@ Questo update migliora significativamente l'esperienza utente e rende TauroBot 3
 ## 📞 Supporto
 
 Per domande o problemi:
-- 📧 Email: anouardbinra88@gmail.com
-- 🐙 GitHub: [Apri Issue](https://github.com/Lucifer-AI-666/Taurosweb/issues)
+- 📧 Email: https://github.com/anouardib88/Taurosweb/issues
+- 🐙 GitHub: [Apri Issue](https://github.com/anouardib88/Taurosweb/issues)
 - 💬 Telegram: @TauroBot
 
 **Grazie per usare TauroBot 3.0! 🐂**

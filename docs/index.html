@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10131a">
+    <meta name="robots" content="index,follow">
+    <title>DIBORACULUM — progetto software in sviluppo</title>
+    <meta name="description" content="DIBORACULUM è un progetto software in sviluppo. Scopri lo stato, consulta il codice su GitHub e segui o proponi i prossimi passi.">
+    <link rel="canonical" href="https://diboracullum.com/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="DIBORACULUM">
+    <meta property="og:title" content="DIBORACULUM — progetto software in sviluppo">
+    <meta property="og:description" content="Codice, stato del progetto e contributi: segui DIBORACULUM su GitHub.">
+    <meta property="og:url" content="https://diboracullum.com/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DIBORACULUM — progetto software in sviluppo">
+    <meta name="twitter:description" content="Codice, stato del progetto e contributi: segui DIBORACULUM su GitHub.">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DIBORACULUM",
+        "url": "https://diboracullum.com/",
+        "description": "Progetto software in sviluppo, con codice e avanzamento consultabili su GitHub.",
+        "inLanguage": "it-IT"
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10131a;
+        --panel: #171c25;
+        --panel-raised: #1d2430;
+        --ink: #f4f0e8;
+        --muted: #b7bcc5;
+        --line: #343b48;
+        --accent: #f0c66a;
+        --accent-ink: #17140d;
+        --width: 1120px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(ellipse at 12% 0%, rgba(240, 198, 106, .11), transparent 34rem),
+          var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+      .wrap { width: min(var(--width), calc(100% - 2.5rem)); margin-inline: auto; }
+      .skip-link {
+        position: absolute; left: -10000px; top: 1rem; z-index: 10;
+        padding: .7rem 1rem; background: var(--accent); color: var(--accent-ink);
+      }
+      .skip-link:focus { left: 1rem; }
+      header { border-bottom: 1px solid var(--line); }
+      .nav {
+        min-height: 76px; display: flex; align-items: center; justify-content: space-between;
+        gap: 1.25rem;
+      }
+      .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; }
+      .brand-mark { width: 34px; height: 34px; color: var(--accent); flex: none; }
+      .brand-name { font-size: .88rem; font-weight: 750; letter-spacing: .16em; }
+      nav ul { display: flex; gap: clamp(.8rem, 3vw, 2rem); list-style: none; margin: 0; padding: 0; }
+      nav a { color: var(--muted); font-size: .9rem; text-decoration: none; }
+      nav a:hover { color: var(--ink); }
+      .hero { padding: clamp(4.75rem, 10vw, 8rem) 0 5rem; }
+      .eyebrow { color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .18em; text-transform: uppercase; }
+      h1 {
+        max-width: 900px; margin: .8rem 0 1rem;
+        font-size: clamp(3rem, 9vw, 6.8rem); line-height: .97; letter-spacing: -.065em;
+      }
+      .hero-lead { max-width: 690px; color: var(--muted); font-size: clamp(1.15rem, 2.5vw, 1.55rem); }
+      .hero-note { max-width: 680px; color: var(--muted); margin-top: 1.25rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+      .button {
+        display: inline-flex; min-height: 48px; align-items: center; justify-content: center;
+        padding: .72rem 1.15rem; border: 1px solid var(--line); border-radius: 6px;
+        font-weight: 700; text-decoration: none; transition: background-color .15s ease, transform .15s ease;
+      }
+      .button:hover { transform: translateY(-2px); background: var(--panel-raised); }
+      .button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+      .button.primary:hover { background: #ffda85; }
+      .status {
+        display: inline-flex; align-items: center; gap: .55rem; margin-top: 2rem;
+        padding: .4rem .7rem; border: 1px solid rgba(240, 198, 106, .45); border-radius: 999px;
+        color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase;
+      }
+      .status::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: currentColor; }
+      main section { border-top: 1px solid var(--line); padding: clamp(3rem, 7vw, 5rem) 0; }
+      .section-heading { max-width: 620px; margin-bottom: 2rem; }
+      h2 { margin: 0 0 .7rem; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.1; letter-spacing: -.035em; }
+      .section-heading p, .card p { color: var(--muted); }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .card { padding: 1.4rem; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+      .card h3 { margin: 0 0 .6rem; font-size: 1.08rem; }
+      .card p { margin: 0; }
+      .state-panel {
+        display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .55fr);
+        gap: 2rem; align-items: start; padding: clamp(1.4rem, 4vw, 2.3rem);
+        border: 1px solid var(--line); border-radius: 8px; background: var(--panel);
+      }
+      .state-panel p { color: var(--muted); }
+      .state-list { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+      .state-list li + li { margin-top: .5rem; }
+      .repo-panel { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+      .repo-panel p { max-width: 650px; color: var(--muted); }
+      footer { border-top: 1px solid var(--line); padding: 1.6rem 0 2.3rem; color: var(--muted); font-size: .88rem; }
+      .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+      .footer-row p { margin: 0; }
+      footer a { color: var(--ink); }
+      @media (max-width: 720px) {
+        .nav { align-items: flex-start; flex-direction: column; padding: 1rem 0; }
+        nav ul { flex-wrap: wrap; gap: .7rem 1rem; }
+        .grid { grid-template-columns: 1fr; }
+        .state-panel { grid-template-columns: 1fr; }
+        .repo-panel, .footer-row { align-items: flex-start; flex-direction: column; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#inizio" aria-label="DIBORACULUM, pagina iniziale">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+            <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M20 5v30M5 20h30M9.4 9.4l21.2 21.2M30.6 9.4 9.4 30.6" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65" />
+            <circle cx="20" cy="20" r="4" fill="currentColor" />
+          </svg>
+          <span class="brand-name">DIBORACULUM</span>
+        </a>
+        <nav aria-label="Navigazione principale">
+          <ul>
+            <li><a href="#progetto">Il progetto</a></li>
+            <li><a href="#stato">Stato</a></li>
+            <li><a href="#codice">Codice e contributi</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenuto">
+      <section class="hero wrap" id="inizio" aria-labelledby="titolo">
+        <p class="eyebrow">Progetto software indipendente</p>
+        <h1 id="titolo">DIBORACULUM</h1>
+        <p class="hero-lead">Un progetto in sviluppo, con codice e avanzamento consultabili su GitHub.</p>
+        <p class="hero-note">Questa pagina è il punto d’ingresso pubblico: spiega cosa è disponibile, cosa resta in lavorazione e dove seguire o proporre modifiche.</p>
+        <div class="actions" aria-label="Azioni principali">
+          <a class="button primary" href="https://github.com/anouardib88/Taurosweb/tree/main/docs">Esplora il sito nel repository</a>
+          <a class="button" href="https://github.com/anouardib88/Taurosweb">Apri il repository</a>
+          <a class="button" href="https://github.com/anouardib88/Taurosweb/issues">Proponi una modifica</a>
+        </div>
+        <p class="status">In sviluppo</p>
+      </section>
+
+      <section id="progetto" aria-labelledby="titolo-progetto">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Il progetto</p>
+            <h2 id="titolo-progetto">Una presenza pubblica, verificabile e gestita tramite GitHub.</h2>
+            <p>DIBORACULUM raccoglie lavoro software in evoluzione. Qui puoi leggere lo stato senza confondere una presentazione pubblica con un prodotto già pronto all’uso.</p>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <h3>Perché esiste</h3>
+              <p>Per rendere chiari codice, decisioni e progressi, lasciando a chi visita un percorso diretto per controllare le fonti e seguire gli aggiornamenti.</p>
+            </article>
+            <article class="card">
+              <h3>Per chi è</h3>
+              <p>Per sviluppatori, tester e persone interessate a esplorare il progetto o contribuire con una segnalazione concreta.</p>
+            </article>
+            <article class="card">
+              <h3>Chi lo costruisce</h3>
+              <p>Sviluppato dal proprietario del repository pubblico, <a href="https://github.com/anouardib88">@anouardib88</a>. Il repository GitHub è il riferimento per sorgenti, documentazione e discussione pubblica.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stato" aria-labelledby="titolo-stato">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="eyebrow">Stato attuale</p>
+            <h2 id="titolo-stato">Il sito informa. Il progetto continua a svilupparsi.</h2>
+          </div>
+          <div class="state-panel">
+            <div>
+              <h3>Disponibile ora</h3>
+              <p>Una pagina statica con collegamenti al repository, alla documentazione e alle segnalazioni. Non richiede un account e non contiene un’interfaccia di accesso.</p>
+              <p>La pagina non integra moduli, analytics o cookie propri. GitHub può trattare i dati tecnici necessari a servire il sito secondo le proprie informative.</p>
+            </div>
+            <div>
+              <h3>Da verificare nel repository</h3>
+              <ul class="state-list">
+                <li>relazione tra DIBORACULUM e il codice TauroBot/Taurosweb presente nel repository;</li>
+                <li>funzioni software effettivamente utilizzabili;</li>
+                <li>attività e correzioni in corso;</li>
+                <li>istruzioni per provare o contribuire.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="codice" aria-labelledby="titolo-codice">
+        <div class="wrap repo-panel">
+          <div>
+            <p class="eyebrow">Fonte ufficiale</p>
+            <h2 id="titolo-codice">Leggi il codice. Segui lo sviluppo.</h2>
+            <p>Il sito è pubblicato dai file versionati nel repository GitHub. Le issue sono il canale per segnalare problemi o proporre un miglioramento; non inviare credenziali o informazioni private.</p>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/anouardib88/Taurosweb/commits/main">Segui gli aggiornamenti</a>
+            <a class="button" href="https://github.com/anouardib88/Taurosweb/issues">Apri GitHub Issues</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-row">
+        <p>DIBORACULUM · Sito informativo statico · Aggiornato il 24 ottobre 2026</p>
+        <p><a href="https://github.com/anouardib88/Taurosweb">Sorgenti su GitHub</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
